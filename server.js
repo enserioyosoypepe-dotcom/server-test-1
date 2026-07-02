@@ -5,6 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const PASSWORD = 'quesososo123';
 
+const fs = require("fs");
+
+console.log("PUBLIC EXISTS:", fs.existsSync(path.join(__dirname, "public")));
+console.log("PUBLIC FILES:", fs.readdirSync(path.join(__dirname, "public")));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
