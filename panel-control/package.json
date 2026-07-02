@@ -1,0 +1,12 @@
+{
+  "name": "panel-control-remoto",
+  "version": "1.0.0",
+  "description": "Servidor + panel de display + panel de control remoto",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
