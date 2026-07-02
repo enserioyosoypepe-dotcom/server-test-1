@@ -54,6 +54,14 @@ app.post('/api/update', (req, res) => {
   res.json({ success: true, state });
 });
 
+app.get("/display", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "display.html"));
+});
+
+app.get("/control", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "control.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
   console.log(`  -> Display: http://localhost:${PORT}/display.html`);
